@@ -54,7 +54,7 @@ export async function updateNote(req,res){
         //if the note with the given id is not found, return 404 error
         if(!updatedNote) return res.status(404).json({message:"Note not found"});
 
-        res.status(200).json({message:"Note updated successfully"},updatedNote);
+        res.status(200).json({message:"Note updated successfully",note:updatedNote});
     }catch(error){
         console.error("Error in updateNote:", error);
         res.status(500).json({message:"Internal server error"});
