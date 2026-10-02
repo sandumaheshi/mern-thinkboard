@@ -19,6 +19,7 @@ const __dirname=path.resolve();
 
 //middleware
 if(process.env.NODE_ENV !== "production") {
+    console.log("CORS enabled for development");
     app.use(
         cors({
             origin: 'http://localhost:5173', //allow requests
